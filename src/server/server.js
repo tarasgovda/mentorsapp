@@ -8,14 +8,9 @@ var path = require('path');
 
 var app = express();
 
-var port = process.env.API_PORT || 3001;
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use('/', express.static(__dirname + './../../public'));
+app.use('/', express.static(path.join(__dirname, './../../public')));
 
-
-app.listen(port, function() {
- console.log(`api running on port ${port}`);
-});
+module.exports = app;
