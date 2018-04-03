@@ -7,9 +7,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "webpack-watch": "webpack -d --git gxcvbwatch",
     "express-server": "nodemon bin/www",
-    "dev": "concurrent --kill-others \"npm run webpack-watch\" \"npm run express-server\""
+    "webpack-watch": "webpack -d --watch",
+    "dev": "concurrent --kill-others \"npm run start\" \"npm run express-server\""
   },
   "repository": {
     "type": "git",
